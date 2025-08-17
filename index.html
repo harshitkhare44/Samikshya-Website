@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samikshya Mahapatra | HR Professional & MBA Candidate</title>
+    <meta name="description" content="HR Professional with expertise in talent acquisition, employee engagement, and HR analytics. MBA candidate specializing in Human Resource Management.">
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #1e3a8a;
+            --accent-color: #60a5fa;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="100" fill="rgba(255,255,255,0.05)"/><circle cx="800" cy="300" r="150" fill="rgba(255,255,255,0.03)"/><circle cx="400" cy="700" r="120" fill="rgba(255,255,255,0.04)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-content .description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 4rem;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .profile-card h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(44, 90, 160, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+            padding-left: 2rem;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: 2rem;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -20px;
+            border-left-color: var(--white);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -20px;
+            border-right-color: var(--white);
+        }
+
+        .timeline-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .timeline-achievements {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-achievements li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .timeline-achievements li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            background: var(--gradient);
+            padding: 2rem;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-subtitle {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-highlights {
+            list-style: none;
+        }
+
+        .project-highlights li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .project-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-details h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+        }
+
+        .contact-details a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                width: 100% !important;
+                margin-left: 0 !important;
+                padding-left: 2rem !important;
+                padding-right: 0 !important;
+            }
+
+            .experience-timeline::before {
+                left: 15px;
+            }
+
+            .timeline-content::before {
+                display: none;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Samikshya M.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Samikshya Mahapatra</h1>
+                <p class="subtitle">HR Professional & Strategic Business Partner</p>
+                <p class="description">
+                    MBA candidate specializing in Human Resource Management with proven expertise in talent acquisition, employee engagement, and HR analytics. Passionate about driving organizational growth through strategic people initiatives.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-user"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-avatar">SM</div>
+                    <h3>MBA Candidate</h3>
+                    <p>Human Resource Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>About Me</h2>
+                <p>Driven by passion for people development and organizational excellence</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <h3>Transforming Organizations Through People</h3>
+                    <p>
+                        I am a results-driven MBA candidate with a strong foundation in Human Resource Management and over a year of progressive experience in HR operations. My expertise spans across talent acquisition, employee engagement, HR analytics, and digital transformation initiatives.
+                    </p>
+                    <p>
+                        With a proven track record of implementing strategic initiatives that drive measurable results—including 20% efficiency gains and 8% improvement in retention rates—I am passionate about leveraging data-driven insights to optimize organizational performance.
+                    </p>
+                    <p>
+                        My unique combination of academic excellence, practical experience, and cross-cultural communication skills positions me to contribute meaningfully to top-tier consulting and product companies.
+                    </p>
+                </div>
+                <div class="stats-grid fade-in">
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Students Trained</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7.9</span>
+                        <span class="stat-label">MBA CGPA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20%</span>
+                        <span class="stat-label">Efficiency Improvement</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8/5</span>
+                        <span class="stat-label">Trainer Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Core Competencies</h2>
+                <p>Technical skills and expertise that drive organizational success</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-users"></i> HR Competencies</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Talent Acquisition</span>
+                        <span class="skill-tag">Employee Engagement</span>
+                        <span class="skill-tag">Performance Management</span>
+                        <span class="skill-tag">Learning & Development</span>
+                        <span class="skill-tag">HR Analytics</span>
+                        <span class="skill-tag">Workforce Planning</span>
+                        <span class="skill-tag">Compensation & Benefits</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-cog"></i> HR Technology</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Workday</span>
+                        <span class="skill-tag">SAP SuccessFactors</span>
+                        <span class="skill-tag">Darwinbox</span>
+                        <span class="skill-tag">Oracle HCM</span>
+                        <span class="skill-tag">PeopleStrong</span>
+                        <span class="skill-tag">ATS Systems</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-chart-bar"></i> Analytics & Data</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Microsoft Excel</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Statistical Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-lightbulb"></i> Core Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Process Optimization</span>
+                        <span class="skill-tag">Cross-cultural Communication</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Training & Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Professional Experience</h2>
+                <p>Building expertise through impactful roles and achievements</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">June 2025 – July 2025</div>
+                        <h3 class="timeline-title">HR Intern</h3>
+                        <div class="timeline-company">NALCO (National Aluminium Company Ltd.)</div>
+                        <p class="timeline-description">
+                            Led strategic analysis of PSU recruitment processes and implemented digital transformation initiatives.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Analyzed recruitment policies across 5+ major PSUs (BHEL, NTPC, SAIL)</li>
+                            <li>Developed digitization strategies achieving 20% efficiency gains</li>
+                            <li>Delivered actionable insights on attrition trends to senior leadership</li>
+                            <li>Launched 3 retention initiatives improving employee retention by 8%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2024 – May 2025</div>
+                        <h3 class="timeline-title">Educator & Communication Trainer</h3>
+                        <div class="timeline-company">PlanetSpark (Part-time, Remote)</div>
+                        <p class="timeline-description">
+                            Trained global students in communication skills while developing cross-cultural competency.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Trained 200+ students across 10+ countries</li>
+                            <li>Achieved 90% improvement in student confidence levels</li>
+                            <li>Maintained consistent 4.8/5 trainer rating</li>
+                            <li>Customized programs for diverse cultural backgrounds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Key Projects</h2>
+                <p>Strategic initiatives that delivered measurable business impact</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="project-title">PSU Recruitment Analysis</h3>
+                        <p class="project-subtitle">NALCO Internship Project</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Comprehensive benchmarking study of recruitment practices across major Public Sector Undertakings to identify efficiency gaps and optimization opportunities.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Benchmarked 6 major PSUs recruitment frameworks</li>
+                            <li>Recommended AI-driven solutions for 20% time reduction</li>
+                            <li>Presented findings to NALCO senior management</li>
+                            <li>Received recognition from HR Leadership team</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="project-title">Employee Engagement Framework</h3>
+                        <p class="project-subtitle">MBA Live Project</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Designed a comprehensive employee engagement model based on Gallup Q12 methodology to boost organizational commitment and performance.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Developed Gallup Q12-based engagement model</li>
+                            <li>Projected 18% engagement improvement</li>
+                            <li>Ranked in top 10% class presentations</li>
+                            <li>Created implementation roadmap for organizations</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="project-title">Global Training Program</h3>
+                        <p class="project-subtitle">PlanetSpark Initiative</p>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Developed and delivered customized communication training programs for diverse global audiences, focusing on cultural sensitivity and effectiveness.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Trained 200+ students across 10+ countries</li>
+                            <li>Designed interactive, culturally-adapted modules</li>
+                            <li>Achieved 90% confidence improvement rates</li>
+                            <li>Maintained 4.8/5 average trainer rating</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Education & Certifications</h2>
+                <p>Continuous learning and professional development</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="fade-in">
+                    <h3 style="color: var(--primary-color); margin-bottom: 2rem;">Academic Background</h3>
+                    
+                    <div class="timeline-content" style="margin-bottom: 2rem;">
+                        <div class="timeline-date">2024 - 2026</div>
+                        <h4 class="timeline-title">MBA in Human Resource Management</h4>
+                        <div class="timeline-company">BIITM, Bhubaneswar</div>
+                        <p class="timeline-description">Current CGPA: 7.9 | Focus on strategic HR, analytics, and organizational behavior</p>
+                    </div>
+                    
+                    <div class="timeline-content" style="margin-bottom: 2rem;">
+                        <div class="timeline-date">2020 - 2023</div>
+                        <h4 class="timeline-title">Bachelor of Arts in Political Science</h4>
+                        <div class="timeline-company">Ramadevi Women's University</div>
+                        <p class="timeline-description">CGPA: 7.9 | Specialized in public policy and governance</p>
+                    </div>
+                    
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h4 class="timeline-title">CBSE Class XII</h4>
+                        <div class="timeline-company">D.A.V. Public School</div>
+                        <p class="timeline-description">Score: 90.5% | Strong foundation in analytical thinking</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 style="color: var(--primary-color); margin-bottom: 2rem;">Professional Certifications</h3>
+                    
+                    <div class="skill-category" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem; font-size: 1.1rem;">
+                            <i class="fas fa-certificate" style="color: var(--primary-color);"></i> 
+                            Data & Analytics
+                        </h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Google Data Analytics (Coursera)</span>
+                            <span class="skill-tag">Wharton People Analytics</span>
+                            <span class="skill-tag">HR Analytics with Excel (LinkedIn)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem; font-size: 1.1rem;">
+                            <i class="fas fa-robot" style="color: var(--primary-color);"></i> 
+                            AI & Technology
+                        </h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">AI in HR (Microsoft)</span>
+                            <span class="skill-tag">SHRM Micro-Credentials</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem; font-size: 1.1rem;">
+                            <i class="fas fa-trophy" style="color: var(--primary-color);"></i> 
+                            Recognition & Awards
+                        </h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem; color: var(--text-light);">
+                                <i class="fas fa-star" style="color: #ffd700; margin-right: 0.5rem;"></i>
+                                Top-Rated Trainer at PlanetSpark
+                            </li>
+                            <li style="margin-bottom: 0.5rem; color: var(--text-light);">
+                                <i class="fas fa-star" style="color: #ffd700; margin-right: 0.5rem;"></i>
+                                NALCO HR Leadership Recognition
+                            </li>
+                            <li style="margin-bottom: 0.5rem; color: var(--text-light);">
+                                <i class="fas fa-star" style="color: #ffd700; margin-right: 0.5rem;"></i>
+                                National Kabaddi Runner-up
+                            </li>
+                            <li style="color: var(--text-light);">
+                                <i class="fas fa-star" style="color: #ffd700; margin-right: 0.5rem;"></i>
+                                Cultural Scholar - Odissi Dance (CCRT Govt. of India)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Let's Connect</h2>
+                <p>Ready to discuss opportunities and collaborations</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Get In Touch</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">
+                        I'm always open to discussing new opportunities, collaborations, or sharing insights about HR strategy and organizational development. Let's connect!
+                    </p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:samikshya0504@gmail.com">samikshya0504@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+918457092469">+91-8457092469</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Bhubaneswar, Odisha, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/samikshyamahapatra" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:samikshya0504@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+918457092469" class="social-link" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="skill-category" style="height: 100%;">
+                        <h3 style="text-align: center; margin-bottom: 2rem;">
+                            <i class="fas fa-handshake"></i> Ready to Collaborate
+                        </h3>
+                        
+                        <div style="text-align: center; padding: 2rem;">
+                            <div style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Open for Opportunities</h4>
+                            <p style="color: var(--text-light); margin-bottom: 2rem; line-height: 1.6;">
+                                Looking for HR roles in consulting, product companies, or startups where I can contribute to strategic people initiatives and organizational growth.
+                            </p>
+                            
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                                <span class="skill-tag">Full-time Positions</span>
+                                <span class="skill-tag">Consulting Projects</span>
+                                <span class="skill-tag">Remote Work</span>
+                                <span class="skill-tag">Mentoring</span>
+                            </div>
+                            
+                            <div style="margin-top: 2rem;">
+                                <a href="mailto:samikshya0504@gmail.com" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Samikshya Mahapatra. All rights reserved. | Designed with passion for HR excellence</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Active navigation link highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinkElements = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinkElements.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', function() {
+            const heroTitle = document.querySelector('.hero-content h1');
+            const originalText = heroTitle.textContent;
+            typeWriter(heroTitle, originalText, 150);
+        });
+
+        // Add interactive skill tags
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 4px 15px rgba(44, 90, 160, 0.2)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Add counter animation to stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Trigger counter animations when stats come into view
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target;
+                    const target = parseFloat(number.textContent);
+                    if (!isNaN(target)) {
+                        animateCounter(number, target);
+                    }
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+    </script>
+</body>
+</html>
